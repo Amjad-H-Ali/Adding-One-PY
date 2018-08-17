@@ -11,12 +11,20 @@ def adding_one(*array):
 
 		return array[0]
 
+	# If last digit is nine, set it equal to 0 and decrement i
 	array[0][i] = 0
+	i -= 1
 
-	i -= 1	
+	# Repeat the process with recursion to carry the one
+
+	return adding_one(array[0], i)
 
 
-	return array[0], i
+
+
+
+
+	
 
 
 print(adding_one([1, 3, 7, 9]))
